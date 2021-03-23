@@ -1,0 +1,17 @@
+.logout{
+    width: 10vw;
+    height: 7vh;
+    font-size: 1.7rem;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    color: white;
+    background-color: red;
+
+    &:hover{
+        transition: 0.2s ease-in-out;
+        background-color: white;
+        color: red;
+    }
+}

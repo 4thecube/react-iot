@@ -17,11 +17,13 @@ const SignIn = () => {
     try {
       setError("");
       setLoading(true);
-      await signin(emailRef.current.value, passwordRef.current.value);
+      await signin(emailRef.current.value, passwordRef.current.value).catch(
+        (error) => {
+          setError(error.message);
+        }
+      );
       history.push("/");
-    } catch {
-      setError("Failed to log in");
-    }
+    } catch {}
 
     setLoading(false);
   }
@@ -44,6 +46,7 @@ const SignIn = () => {
               ref={passwordRef}
             />
           </div>
+          <span className="error">{error}</span>
           <button className="button" type="submit">
             SIGN IN
           </button>

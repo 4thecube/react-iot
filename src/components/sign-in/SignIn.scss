@@ -24,6 +24,10 @@ $green: #42e24f;
       justify-content: center;
       align-items: center;
 
+      .error{
+        color: red;
+      }
+
       &__title {
         letter-spacing: 2px;
         font-size: 3rem;

@@ -6,7 +6,7 @@ import "./SignIn.scss";
 const SignIn = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { signin, currentUser } = useAuth();
+  const { signin } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();

@@ -1,9 +1,11 @@
 import React from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
-
+import mapboxgl from "mapbox-gl";
 import pin from "../../assets/pin.png";
-
 import "./Map.scss";
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const Map = () => {
   const [viewport, setViewport] = React.useState({
@@ -11,7 +13,6 @@ const Map = () => {
     longitude: 24.70972,
     zoom: 16,
   });
-
   return (
     <ReactMapGL
       {...viewport}

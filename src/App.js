@@ -27,6 +27,4 @@ function App() {
   );
 }
 
-//TODO: today we will contain stupid components into bit SignIn (SignOut) components and create routes for app. Dashbord if user is auth.
-
 export default App;

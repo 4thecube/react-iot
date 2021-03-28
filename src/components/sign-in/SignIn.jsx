@@ -46,6 +46,7 @@ const SignIn = () => {
               ref={passwordRef}
             />
           </div>
+          <span className="tip">For login use email: dot@dot.ua | password: 12345678</span>
           <span className="error">{error}</span>
           <button className="button" type="submit">
             SIGN IN

@@ -28,6 +28,10 @@ $green: #42e24f;
         color: red;
       }
 
+      .tip{
+        color: $green;
+      }
+
       &__title {
         letter-spacing: 2px;
         font-size: 3rem;

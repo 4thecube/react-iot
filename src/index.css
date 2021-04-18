@@ -1,5 +1,5 @@
 body {
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
   font-size: 16px;
   font-family: -apple-system, "Noto Sans JP", sans-serif, "Lexend", sans-serif,

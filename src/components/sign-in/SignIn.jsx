@@ -32,6 +32,7 @@ const SignIn = () => {
       <div className="sign-in__form-container">
         <form className="form" action="sign-in" onSubmit={handleSubmit}>
           <span className="form__title">Sign into your account</span>
+          {error ? <span className="error" err={error}></span> : null}
           <div className="form__input-container">
             <input
               className="input"
@@ -46,8 +47,10 @@ const SignIn = () => {
               ref={passwordRef}
             />
           </div>
-          <span className="tip">For login use email: dot@dot.ua | password: 12345678</span>
-          <span className="error">{error}</span>
+          <span className="tip">
+            For login use email: dot@dot.ua | password: 12345678
+          </span>
+
           <button className="button" type="submit">
             SIGN IN
           </button>

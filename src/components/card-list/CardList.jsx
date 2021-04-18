@@ -27,7 +27,7 @@ const CardList = () => {
       {data.temperature ? (
         <>
           <Card data={data} place='Kitchen' />
-          <EmptyCard />
+          {/* <EmptyCard /> */}
         </>
       ) : (
         <Loader />

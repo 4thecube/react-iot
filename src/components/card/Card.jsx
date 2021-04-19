@@ -1,5 +1,4 @@
 import React from "react";
-import Map from "../map/Map";
 
 import "./Card.scss";
 
@@ -10,7 +9,7 @@ const Card = ({ data, place }) => {
   console.log(data);
   const { temperature, humidity, rain, timeStamp, dayStamp } = data;
 
-  const convertedToDate = new Date(data.dayStamp);
+  const convertedToDate = new Date(dayStamp);
   const fullMonthTimeStamp = convertedToDate.toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -55,9 +54,9 @@ const Card = ({ data, place }) => {
 
       <div className="card__rain-sensor bordered border-gradient">
         {rain > 1000 ? (
-          <img className="rain-sensor__image" src={sleepy} />
+          <img className="rain-sensor__image" src={sleepy} alt="dry"/>
         ) : (
-          <img className="rain-sensor__image" src={cloud}></img>
+          <img className="rain-sensor__image" src={cloud} alt="rain sensor is active"></img>
         )}
         <span className="card__measure-message">
           {rain > 1000 ? highRainingSensorData : lowRainingSensorData}
